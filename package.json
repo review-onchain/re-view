@@ -2,7 +2,7 @@
   "name": "re_view",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://re-view-onchain.github.io/re-view",
+  "homepage": "http://review-onchain.github.io/re-view",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "icon-sdk-js": "0.0.16",
