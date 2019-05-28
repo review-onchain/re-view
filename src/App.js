@@ -72,7 +72,7 @@ class Card extends Component {
         params: {
           idx: IconConverter.toHex(movie.id), 
         },
-        to: config.CONTRACT_ADDRESS,
+        to: window.CONTRACT_ADDRESS,
       })
     ).execute()
     const myScore = await iconService.call(
@@ -82,7 +82,7 @@ class Card extends Component {
         params: {
           idx: IconConverter.toHex(movie.id), 
         },
-        to: config.CONTRACT_ADDRESS,
+        to: window.CONTRACT_ADDRESS,
       })
     ).execute()
     this.setState({
@@ -143,7 +143,7 @@ export default class App extends Component {
     const { myAddress } = this.state
     const txObj = sendTxBuild({
       from: myAddress,
-      to: config.CONTRACT_ADDRESS,
+      to: window.CONTRACT_ADDRESS,
       methodName: 'mark_movie',
       params: {
         idx: IconConverter.toHex(id), 
@@ -152,7 +152,7 @@ export default class App extends Component {
     })
     // const txObj = sendTxBuild({
     //   from: myAddress,
-    //   to: config.CONTRACT_ADDRESS,
+    //   to: window.CONTRACT_ADDRESS,
     //   methodName: 'add_movie',
     //   params: {
     //     idx: IconConverter.toHex(id),

@@ -4,7 +4,7 @@ import IconService, {
   } from 'icon-sdk-js'
   import config from './config'
   
-  const provider = new HttpProvider(config.PROVIDER_URL)
+  const provider = new HttpProvider(window.PROVIDER_URL)
   const iconService = new IconService(provider)
   
   const {
@@ -33,7 +33,7 @@ import IconService, {
     to,
     methodName,
     params = {},
-    networkId = config.NID,
+    networkId = window.NID,
     stepLimit = '0x493e0',
     value = '0x0',
   } = {}) => {
